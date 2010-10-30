@@ -1,11 +1,13 @@
+#TODO: add note about version and rspec 1 vs rspec 2 compatibility
+
 = Rspec Quickfix Formatter
 
 Provides a rspec formatter that outputs a file vim's quickfix feature will understand. This allows nice integration between rspec test failures and the vim editor.
 
 = Requirements
 
-rspec 1.3.X
-vim 7.X
+  rspec 1.3.X
+  vim 7.X
 
 I haven't tried using this with rspec 2 yet.
 
@@ -21,8 +23,9 @@ There are a couple different ways to achieve this. I prefer the first option, bu
 
 Add the following lines to your spec.opts file:
 
---require rspec-quickfix-formatter
---format Spec::Runner::Formatter::QuickfixFormatter:tmp/quickfix
+  --require rubygems
+  --require rspec-quickfix-formatter
+  --format Spec::Runner::Formatter::QuickfixFormatter:tmp/quickfix
 
 The path passed to --format will be the location that the quickfix file will be written to disk. I always run my specs from the projects root directory (which always has tmp directories), so the setting of tmp/quickfix works well for me. This path will need to match the path in your vim configuration.
 
