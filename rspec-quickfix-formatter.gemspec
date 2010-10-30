@@ -22,10 +22,16 @@ Gem::Specification.new do |s|
      ".rvmrc",
      "Gemfile",
      "Gemfile.lock",
+     "LICENSE",
      "README.rdoc",
+     "Rakefile",
      "VERSION",
      "lib/rspec-quickfix-formatter.rb",
-     "lib/spec/quickfix_formatter.rb"
+     "lib/spec/quickfix_formatter.rb",
+     "rspec-quickfix-formatter.gemspec",
+     "spec/rspec-quickfix-formatter_spec.rb",
+     "spec/spec.opts",
+     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/ajh/rspec-quickfix-formatter}
   s.licenses = ["GPLv3"]
