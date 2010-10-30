@@ -21,17 +21,37 @@ There are a couple different ways to achieve this. I prefer the first option, bu
 
 Add the following lines to your spec.opts file:
 
---require 'rspec_quickfix_formatter'
---format Spec::QuickfixFormatter:/some/path
+--require rspec-quickfix-formatter
+--format Spec::Runner::Formatter::QuickfixFormatter:tmp/quickfix
+
+The path passed to --format will be the location that the quickfix file will be written to disk. I always run my specs from the projects root directory (which always has tmp directories), so the setting of tmp/quickfix works well for me. This path will need to match the path in your vim configuration.
 
 === configure in spec_helper.rb
 === configure using spec command line options
 
 == Setting up vim
 
-Try using this command:
+There are two aspects to configuring vim, defining the error format, and loading the file into the quickfix window.
 
-  :cfile /some/path
+Use this command to set vim's error format:
+
+  :set errorformat=%f:%l\ %n\ %m
+
+Use this command to open the quickfix file:
+
+  :cfile tmp/quickfix
+
+Or create a shortcut:
+  
+  map <leader>s :cfile tmp/quickfix<CR>
+
+The tmp/quickfix needs to be the path to your quickfix file. Since I start vim in the root of my project, a relative path works well for me.
+
+For more information about the quickfix and related location list features in vim, see: 
+
+  :help quickfix
+
+TODO: it may be possible to leverage the default errorformat instead of configuring a simple one.
 
 == Note on Patches/Pull Requests
  
