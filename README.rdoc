@@ -1,0 +1,38 @@
+= Rspec Quickfix Formatter
+
+Provides a rspec formatter that outputs a file vim's quickfix feature will understand. This allows nice integration between rspec test failures and the vim editor.
+
+= Requirements
+
+rspec 1.3.X
+vim 7.X
+
+I haven't tried using this with rspec 2 yet.
+
+= Install
+
+There are two parts to this install: 1) Setting up rspec to use the formatter and write a file in the quickfix format, and 2) setting up vim to read from the quickfix file.
+
+== Setting up rspec
+
+There are a couple different ways to achieve this. I prefer the first option, but the others should work too.
+
+=== configure with spec.opts
+
+Add the following lines to your spec.opts file:
+
+--require 'rspec_quickfix_formatter'
+--format Spec::QuickfixFormatter:/some/path
+
+=== configure in spec_helper.rb
+=== configure using spec command line options
+
+== Setting up vim
+
+Try using this command:
+
+  :cfile /some/path
+
+== Copyright
+
+Copyright (c) 2010 Andy Hartford. See LICENSE for details.
