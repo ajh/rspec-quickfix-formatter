@@ -2,7 +2,7 @@
 
 Provides a rspec formatter that outputs a file vim's quickfix feature will understand. This allows nice integration between rspec test failures and the vim editor.
 
-= Similar Projects =
+= Similar Projects
 
 * http://github.com/rleemorlang/spackle
 * https://wincent.com/blog/running-rspec-specs-from-inside-vim
@@ -57,12 +57,20 @@ For more information about the quickfix and related location list features in vi
 
   :help quickfix
 
-== TODOS ==
+== Todos
 
 * Explore other rspec config options and document them
 * rspec 2
 * Document version numbers and how they relate to rspec compatibility
 * it may be possible to leverage the default errorformat instead of configuring a simple one.
+
+== Future work
+
+* add vim commands in quickfix mode to display a full backtrace for an error. 
+
+== Bugs
+
+* I noticed some multiline error messages which confused quickfix.
 
 == Note on Patches/Pull Requests
  
