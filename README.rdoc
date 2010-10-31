@@ -1,8 +1,11 @@
-#TODO: add note about version and rspec 1 vs rspec 2 compatibility
-
 = Rspec Quickfix Formatter
 
 Provides a rspec formatter that outputs a file vim's quickfix feature will understand. This allows nice integration between rspec test failures and the vim editor.
+
+= Similar Projects =
+
+* http://github.com/rleemorlang/spackle
+* https://wincent.com/blog/running-rspec-specs-from-inside-vim
 
 = Requirements
 
@@ -54,7 +57,12 @@ For more information about the quickfix and related location list features in vi
 
   :help quickfix
 
-TODO: it may be possible to leverage the default errorformat instead of configuring a simple one.
+== TODOS ==
+
+* Explore other rspec config options and document them
+* rspec 2
+* Document version numbers and how they relate to rspec compatibility
+* it may be possible to leverage the default errorformat instead of configuring a simple one.
 
 == Note on Patches/Pull Requests
  
